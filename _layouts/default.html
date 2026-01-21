@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
+    </title>
+    <meta name="description" content="{{ site.description }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="site-title" href="{{ '/' | relative_url }}">
+          {{ site.title }}
+        </a>
+        <nav class="site-nav">
+          <a href="{{ '/' | relative_url }}">首页</a>
+          <a href="{{ '/about/' | relative_url }}">关于</a>
+          <a href="{{ '/projects/' | relative_url }}">项目</a>
+          <a href="{{ '/contact/' | relative_url }}">联系</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© {{ site.time | date: "%Y" }} {{ site.title }}</span>
+        <span class="footer-desc">{{ site.description }}</span>
+      </div>
+    </footer>
+  </body>
+</html>
+
