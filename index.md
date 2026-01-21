@@ -8,7 +8,8 @@ title: "Home"
     <p class="hero-kicker">Hi, I'm</p>
     <h1 class="hero-title">Louis</h1>
     <p class="hero-subtitle">
-      一个热爱技术与创作的开发者。这里是我的个人主页，你可以了解我的
+      我是一名长期深耕储能与电池智能算法的算法工程师，专注 ML / TinyML / BatteryML 以及锂电池储能系统（BESS）相关算法。
+      在这里，你可以了解我的
       <a href="{{ '/about/' | relative_url }}">背景</a>、
       <a href="{{ '/projects/' | relative_url }}">项目</a> 和
       <a href="{{ '/contact/' | relative_url }}">联系方式</a>。
@@ -43,11 +44,11 @@ title: "Home"
 <section class="section">
   <h2>技能概览</h2>
   <div class="skill-tags">
-    <span class="tag">Frontend</span>
-    <span class="tag">Backend</span>
-    <span class="tag">DevOps</span>
-    <span class="tag">云服务</span>
-    <span class="tag">开源贡献</span>
+    <span class="tag">Machine Learning</span>
+    <span class="tag">TinyML</span>
+    <span class="tag">BatteryML</span>
+    <span class="tag">BESS Algorithms</span>
+    <span class="tag">Energy Storage BMS</span>
   </div>
 </section>
 
