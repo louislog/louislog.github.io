@@ -22,6 +22,8 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
   background: radial-gradient(ellipse 120% 80% at 50% 0%, #1f2937 0, var(--bg) 50%);
@@ -83,8 +85,8 @@ a:hover {
 }
 
 .site-main {
+  flex: 1;
   padding: 40px 0 64px;
-  min-height: 60vh;
 }
 
 .site-footer {
