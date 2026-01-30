@@ -232,6 +232,16 @@ a:hover {
   color: #e5e7eb;
 }
 
+.post-excerpt {
+  font-size: 13px;
+  color: var(--text-soft);
+  margin-left: 4px;
+}
+
+.note-category {
+  flex-shrink: 0;
+}
+
 .skill-tags {
   display: flex;
   flex-wrap: wrap;

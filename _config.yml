@@ -1,3 +1,8 @@
 theme: jekyll-theme-minimal
-title: Louis' Homepage
+title: Welcome to Louis' Homepage
 description: You are more than what you have become now.
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/

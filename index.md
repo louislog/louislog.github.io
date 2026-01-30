@@ -11,6 +11,7 @@ title: "Home"
       我是一名长期深耕储能与电池智能算法的算法工程师，专注 ML / TinyML / BatteryML 以及锂电池储能系统（BESS）相关算法。
       在这里，你可以了解我的
       <a href="{{ '/about/' | relative_url }}">背景</a>、
+      <a href="{{ '/notes/' | relative_url }}">笔记</a>、
       <a href="{{ '/projects/' | relative_url }}">项目</a> 和
       <a href="{{ '/contact/' | relative_url }}">联系方式</a>。
     </p>
