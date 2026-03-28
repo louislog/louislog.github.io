@@ -7,6 +7,15 @@ title: "Home"
   <div class="hero-text">
     <p class="hero-kicker">Hi, I'm</p>
     <h1 class="hero-title">Louis</h1>
+    <section class="slogan-showcase" aria-label="站点理念">
+      <div class="slogan-showcase-inner">
+        <p class="slogan-showcase-text">
+          <span class="slogan-line">Think Deep.</span>
+          <span class="slogan-separator" aria-hidden="true"></span>
+          <span class="slogan-line">Build Simple.</span>
+        </p>
+      </div>
+    </section>
     <p class="hero-subtitle">
       我是一名长期深耕储能与电池智能算法的算法工程师，专注 ML / TinyML / BatteryML 以及锂电池储能系统（BESS）相关算法。
       在这里，你可以了解我的
@@ -26,16 +35,6 @@ title: "Home"
     </div>
   </div>
 </div>
-
-<section class="slogan-showcase" aria-label="站点理念">
-  <div class="slogan-showcase-inner">
-    <p class="slogan-showcase-text">
-      <span class="slogan-line">Think Deep.</span>
-      <span class="slogan-separator" aria-hidden="true"></span>
-      <span class="slogan-line">Build Simple.</span>
-    </p>
-  </div>
-</section>
 
 <div class="sections-grid">
   <section class="section">

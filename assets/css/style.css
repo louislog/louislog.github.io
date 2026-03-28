@@ -276,6 +276,21 @@ a:hover {
   flex-shrink: 0;
 }
 
+.hero-text .hero-title {
+  margin-bottom: 8px;
+}
+
+.hero-text .slogan-showcase {
+  margin: 0 0 22px;
+  padding: clamp(16px, 2.8vw, 24px) clamp(18px, 3vw, 28px);
+  box-shadow: 0 14px 36px rgba(2, 6, 23, 0.42);
+}
+
+.hero-text .slogan-showcase-text {
+  font-size: clamp(0.95rem, 2.2vw, 1.35rem);
+  letter-spacing: 0.14em;
+}
+
 .sections-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
