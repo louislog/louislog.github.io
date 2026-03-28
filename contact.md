@@ -12,5 +12,5 @@ permalink: /contact/
 - **GitHub**：[`https://github.com/louislog`](https://github.com/louislog)
 <!-- - **LinkedIn / 其他社交**：可自行补充 -->
 
-> 提示：把上面的邮箱和社交账号改成你自己的真实信息即可。
+
 

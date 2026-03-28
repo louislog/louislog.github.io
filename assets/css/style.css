@@ -198,6 +198,84 @@ a:hover {
   color: white;
 }
 
+.slogan-showcase {
+  position: relative;
+  margin: 8px 0 48px;
+  padding: clamp(28px, 5vw, 44px) clamp(24px, 4vw, 40px);
+  border-radius: 20px;
+  border: 1px solid var(--border-subtle);
+  background: radial-gradient(
+      ellipse 100% 120% at 15% 0%,
+      rgba(59, 130, 246, 0.12) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 80% 100% at 100% 100%,
+      rgba(168, 85, 247, 0.08) 0%,
+      transparent 50%
+    ),
+    linear-gradient(145deg, rgba(30, 41, 59, 0.55) 0%, #020617 72%);
+  box-shadow: 0 24px 48px rgba(2, 6, 23, 0.55);
+  overflow: hidden;
+}
+
+.slogan-showcase::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18%;
+  bottom: 18%;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(180deg, #3b82f6, #6366f1 45%, #a855f7);
+  box-shadow: 0 0 24px rgba(59, 130, 246, 0.45);
+}
+
+.slogan-showcase-inner {
+  position: relative;
+  padding-left: clamp(16px, 3vw, 28px);
+}
+
+.slogan-showcase-text {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(12px, 2.5vw, 20px);
+  font-size: clamp(1.2rem, 3.2vw, 2rem);
+  font-weight: 200;
+  letter-spacing: 0.18em;
+  text-transform: none;
+  line-height: 1.35;
+  color: #f9fafb;
+}
+
+.slogan-line {
+  white-space: nowrap;
+}
+
+.slogan-line:first-of-type {
+  color: #e5e7eb;
+}
+
+.slogan-line:last-of-type {
+  font-weight: 400;
+  background: linear-gradient(110deg, #e0e7ff 0%, #93c5fd 40%, #e5e7eb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.slogan-separator {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #93c5fd, #3b82f6);
+  box-shadow: 0 0 14px rgba(59, 130, 246, 0.65);
+  flex-shrink: 0;
+}
+
 .sections-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -333,6 +411,25 @@ code {
   .site-nav a {
     margin-left: 0;
     margin-right: 16px;
+  }
+
+  .slogan-showcase-text {
+    letter-spacing: 0.12em;
+    font-size: clamp(1.05rem, 4.2vw, 1.45rem);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .slogan-line {
+    white-space: normal;
+  }
+
+  .slogan-separator {
+    width: 36px;
+    height: 2px;
+    border-radius: 999px;
+    margin: 2px 0;
   }
 }
 

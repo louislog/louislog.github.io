@@ -27,6 +27,16 @@ title: "Home"
   </div>
 </div>
 
+<section class="slogan-showcase" aria-label="站点理念">
+  <div class="slogan-showcase-inner">
+    <p class="slogan-showcase-text">
+      <span class="slogan-line">Think Deep.</span>
+      <span class="slogan-separator" aria-hidden="true"></span>
+      <span class="slogan-line">Build Simple.</span>
+    </p>
+  </div>
+</section>
+
 <div class="sections-grid">
   <section class="section">
     <h2>近期动态</h2>

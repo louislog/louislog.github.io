@@ -49,7 +49,7 @@ permalink: /notes/
 </section>
 
 <section class="section">
-  <h2>全部笔记（按时间）</h2>
+  <h2>全部笔记</h2>
   <ul class="post-list">
     {% assign sorted_notes = site.notes | sort: "date" | reverse %}
     {% for note in sorted_notes %}
