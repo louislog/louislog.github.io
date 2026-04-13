@@ -6,19 +6,41 @@ permalink: /projects/
 
 ## 项目 Projects
 
-这里将展示我做过的一些项目。
+以下列表由 GitHub Actions 自动同步，展示当前账号下的公开仓库（已过滤 fork）。
 
-<!-- ### 示例项目 A
+{% assign projects = site.data.public_projects %}
 
-- **简介**：一个示例项目，用于展示项目列表布局。
-- **技术栈**：HTML / CSS / JavaScript
-- **链接**：暂未公开
+{% if projects and projects.size > 0 %}
+<div class="project-grid">
+	{% for project in projects %}
+	<article class="project-card">
+		<h3 class="project-title">
+			<a href="{{ project.html_url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
+		</h3>
 
-### 示例项目 B
+		<p class="project-desc">
+			{% if project.description and project.description != "" %}
+				{{ project.description }}
+			{% else %}
+				暂无项目简介。
+			{% endif %}
+		</p>
 
-- **简介**：另一个示例项目，你可以把它替换为你真实的作品。
-- **技术栈**：React / Node.js / 部署到 GitHub Pages
-- **链接**：暂未公开 -->
+		<div class="project-meta">
+			<span>语言: {{ project.language | default: "Unknown" }}</span>
+			<span>Star: {{ project.stargazers_count | default: 0 }}</span>
+			<span>更新: {{ project.updated_at | date: "%Y-%m-%d" }}</span>
+		</div>
 
-> 提示：之后可以把本页面改成动态列表，或者按“开源 / 个人 / 工作”分类。
+		{% if project.homepage and project.homepage != "" %}
+		<p class="project-homepage">
+			<a href="{{ project.homepage }}" target="_blank" rel="noopener noreferrer">项目主页</a>
+		</p>
+		{% endif %}
+	</article>
+	{% endfor %}
+</div>
+{% else %}
+<p class="project-empty">暂未同步到公开项目，请稍后刷新，或手动运行 GitHub Actions workflow。</p>
+{% endif %}
 

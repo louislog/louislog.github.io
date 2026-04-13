@@ -1,0 +1,74 @@
+name: Sync Public GitHub Projects
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync-public-projects:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Sync public repositories to data file
+        env:
+          GH_OWNER: ${{ github.repository_owner }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          output_file="_data/public_projects.json"
+          mkdir -p "$(dirname "$output_file")"
+
+          projects='[]'
+          page=1
+
+          while true; do
+            response=$(curl -fsSL \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              "https://api.github.com/users/${GH_OWNER}/repos?type=public&sort=updated&per_page=100&page=${page}")
+
+            count=$(echo "$response" | jq 'length')
+            if [ "$count" -eq 0 ]; then
+              break
+            fi
+
+            filtered=$(echo "$response" | jq '[.[] | select(.fork == false) | {
+              name,
+              html_url,
+              description,
+              homepage,
+              language,
+              stargazers_count,
+              updated_at,
+              topics
+            }]')
+
+            projects=$(jq -n --argjson a "$projects" --argjson b "$filtered" '$a + $b')
+            page=$((page + 1))
+          done
+
+          echo "$projects" | jq 'sort_by(.updated_at) | reverse' > "$output_file"
+
+      - name: Commit updated project data
+        run: |
+          set -euo pipefail
+
+          if git diff --quiet -- _data/public_projects.json; then
+            echo "No project data changes detected."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add _data/public_projects.json
+          git commit -m "chore: sync public github projects"
+          git push
