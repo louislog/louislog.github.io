@@ -1,22 +1,12 @@
 [
   {
-    "name": "louislog.github.io",
-    "html_url": "https://github.com/louislog/louislog.github.io",
-    "description": "Louis' Homepage",
-    "homepage": null,
-    "language": "CSS",
-    "stargazers_count": 0,
-    "updated_at": "2026-04-13T12:54:25Z",
-    "topics": []
-  },
-  {
     "name": "ESP32S3_AI_BOX",
     "html_url": "https://github.com/louislog/ESP32S3_AI_BOX",
-    "description": null,
-    "homepage": null,
+    "description": "ESP32-S3 AI Box - 基于 ESP-IDF 的 AI 视觉/生物识别多模态嵌入式应用平台，集成摄像头、IMU、心率血氧体温传感器、LVGL UI、Wi-Fi 网络、SD 卡存储及 XiaoZhi AI 对话引擎。支持实时视觉处理、生物识别监测、AI 决策推理与多屏交互应用开发。",
+    "homepage": "",
     "language": "C",
     "stargazers_count": 0,
-    "updated_at": "2026-04-13T12:48:11Z",
+    "updated_at": "2026-04-13T13:36:48Z",
     "topics": []
   },
   {
@@ -25,8 +15,8 @@
     "description": null,
     "homepage": null,
     "language": "Python",
-    "stargazers_count": 1,
-    "updated_at": "2026-01-08T06:08:03Z",
+    "stargazers_count": 0,
+    "updated_at": "2026-04-13T13:26:08Z",
     "topics": []
   }
 ]
