@@ -6,8 +6,6 @@ permalink: /projects/
 
 ## 项目 Projects
 
-以下列表由 GitHub Actions 自动同步，展示当前账号下的公开仓库（已过滤 fork）。
-
 {% assign projects = site.data.public_projects %}
 
 {% if projects and projects.size > 0 %}
@@ -41,6 +39,6 @@ permalink: /projects/
 	{% endfor %}
 </div>
 {% else %}
-<p class="project-empty">暂未同步到公开项目，请稍后刷新，或手动运行 GitHub Actions workflow。</p>
+<p class="project-empty">暂无公开项目。</p>
 {% endif %}
 

@@ -19,6 +19,7 @@ jobs:
       - name: Sync public repositories to data file
         env:
           GH_OWNER: ${{ github.repository_owner }}
+          GH_REPO: ${{ github.event.repository.name }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
@@ -40,7 +41,7 @@ jobs:
               break
             fi
 
-            filtered=$(echo "$response" | jq '[.[] | select(.fork == false) | {
+            filtered=$(echo "$response" | jq --arg current_repo "$GH_REPO" '[.[] | select(.fork == false and .name != $current_repo) | {
               name,
               html_url,
               description,
