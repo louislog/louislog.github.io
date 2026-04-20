@@ -39,7 +39,7 @@ BESS（Battery Energy Storage System）调度的数据模型是 AI-EMS 中最关
 
 ### 电价
 
-$\rho_t$：时刻 $t$ 的购电电价（$\text{\$}/\mathrm{kWh}$ 或等价货币单位）。
+$\rho_t$：时刻 $t$ 的购电电价（$kWh$ 或等价货币单位）。
 
 | 时刻  | 电价 $\rho_t$ |
 | ----- | ---------------- |

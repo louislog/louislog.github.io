@@ -42,18 +42,8 @@
         <span class="footer-desc">{{ site.description }}</span>
       </div>
     </footer>
-    <script
-      defer
-      src="{{ '/assets/vendor/katex/katex.min.js' | relative_url }}"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      defer
-      src="{{ '/assets/vendor/katex/contrib/auto-render.min.js' | relative_url }}"
-      crossorigin="anonymous"
-    ></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      window.__renderSiteMath = function () {
         if (typeof renderMathInElement !== "function") return;
         renderMathInElement(document.body, {
           delimiters: [
@@ -65,8 +55,23 @@
           ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"],
           throwOnError: false
         });
+      };
+      document.addEventListener("DOMContentLoaded", function () {
+        // 兜底：若外部脚本已就绪，则直接渲染
+        window.__renderSiteMath();
       });
     </script>
+    <script
+      defer
+      src="{{ '/assets/vendor/katex/katex.min.js' | relative_url }}"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="{{ '/assets/vendor/katex/contrib/auto-render.min.js' | relative_url }}"
+      crossorigin="anonymous"
+      onload="window.__renderSiteMath && window.__renderSiteMath();"
+    ></script>
   </body>
 </html>
 
