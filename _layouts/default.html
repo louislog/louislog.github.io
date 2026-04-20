@@ -8,6 +8,11 @@
     </title>
     <meta name="description" content="{{ site.description }}" />
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header class="site-header">
@@ -37,6 +42,17 @@
         <span class="footer-desc">{{ site.description }}</span>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false},{left:'$',right:'$',display:false}],ignoredTags:['script','noscript','style','textarea','pre','code'],throwOnError:false});"
+    ></script>
   </body>
 </html>
 
