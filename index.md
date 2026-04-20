@@ -40,14 +40,20 @@ title: "Home"
   <section class="section">
     <h2>近期动态</h2>
     <ul class="post-list">
-      {% for post in site.posts limit:3 %}
+      {% assign recent_updates = site.posts | concat: site.notes | sort: "date" | reverse %}
+      {% for item in recent_updates limit: 6 %}
         <li class="post-item">
-          <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-          <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="post-date">{{ item.date | date: "%Y-%m-%d" }}</span>
+          {% if item.path contains "_notes" %}
+            <span class="note-category tag">笔记</span>
+          {% else %}
+            <span class="note-category tag">文章</span>
+          {% endif %}
+          <a class="post-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
         </li>
       {% endfor %}
-      {% if site.posts == empty %}
-        <li class="post-item empty">暂时还没有文章，敬请期待。</li>
+      {% if recent_updates.size == 0 %}
+        <li class="post-item empty">暂时还没有内容。在 <code>_posts/</code> 发布文章或在 <code>_notes/</code> 更新笔记后会自动出现在这里。</li>
       {% endif %}
     </ul>
   </section>

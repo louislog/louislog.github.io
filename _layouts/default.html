@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+      href="{{ '/assets/vendor/katex/katex.min.css' | relative_url }}"
       crossorigin="anonymous"
     />
   </head>
@@ -44,15 +44,29 @@
     </footer>
     <script
       defer
-      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+      src="{{ '/assets/vendor/katex/katex.min.js' | relative_url }}"
       crossorigin="anonymous"
     ></script>
     <script
       defer
-      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+      src="{{ '/assets/vendor/katex/contrib/auto-render.min.js' | relative_url }}"
       crossorigin="anonymous"
-      onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false},{left:'$',right:'$',display:false}],ignoredTags:['script','noscript','style','textarea','pre','code'],throwOnError:false});"
     ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof renderMathInElement !== "function") return;
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "\\[", right: "\\]", display: true },
+            { left: "\\(", right: "\\)", display: false },
+            { left: "$", right: "$", display: false }
+          ],
+          ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"],
+          throwOnError: false
+        });
+      });
+    </script>
   </body>
 </html>
 
