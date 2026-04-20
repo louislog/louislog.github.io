@@ -15,7 +15,7 @@ excerpt: 从系统结构、外生数据、状态/决策变量到动力学与约�
   </p>
 </header>
 
-<div class="note-prose">
+<div class="note-prose" markdown="1">
 
 BESS（Battery Energy Storage System）调度的数据模型是 AI-EMS 中最关键的基础之一：它回答**问题里有哪些量、哪些是外部给定、哪些是状态与决策，以及它们如何随时间演化**。下文按五个核心块展开：**系统结构**、**输入数据**、**状态**、**决策（动作）**、**系统动力学**；随后补充目标函数、约束与工程中的数据形态。
 
