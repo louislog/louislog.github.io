@@ -1,5 +1,15 @@
 [
   {
+    "name": "BMS_Analysis_Tool",
+    "html_url": "https://github.com/louislog/BMS_Analysis_Tool",
+    "description": "BMS 数据批量处理与可视化分析工具。提供 CSV 格式统一、智能文件分组合并、多维数据可视化等功能。 支持预设和自定义正则表达式匹配，适用于大规模电池管理系统运行日志的整理与对比分析。",
+    "homepage": "",
+    "language": "Python",
+    "stargazers_count": 0,
+    "updated_at": "2026-04-20T05:40:07Z",
+    "topics": []
+  },
+  {
     "name": "ESP32S3_AI_BOX",
     "html_url": "https://github.com/louislog/ESP32S3_AI_BOX",
     "description": "ESP32-S3 AI Box - 基于 ESP-IDF 的 AI 视觉/生物识别多模态嵌入式应用平台，集成摄像头、IMU、心率血氧体温传感器、LVGL UI、Wi-Fi 网络、SD 卡存储及 XiaoZhi AI 对话引擎。支持实时视觉处理、生物识别监测、AI 决策推理与多屏交互应用开发。",
@@ -7,16 +17,6 @@
     "language": "C",
     "stargazers_count": 0,
     "updated_at": "2026-04-13T13:36:48Z",
-    "topics": []
-  },
-  {
-    "name": "BMS_Analysis_Tool",
-    "html_url": "https://github.com/louislog/BMS_Analysis_Tool",
-    "description": null,
-    "homepage": null,
-    "language": "Python",
-    "stargazers_count": 0,
-    "updated_at": "2026-04-13T13:26:08Z",
     "topics": []
   }
 ]
