@@ -1,5 +1,15 @@
 [
   {
+    "name": "fund-strategy",
+    "html_url": "https://github.com/louislog/fund-strategy",
+    "description": "纯前端静态 Web 应用，通过 JSONP 拉取基金/指数历史数据，在前端完成回测与可视化。",
+    "homepage": null,
+    "language": "TypeScript",
+    "stargazers_count": 0,
+    "updated_at": "2026-05-12T08:52:18Z",
+    "topics": []
+  },
+  {
     "name": "BMS_Analysis_Tool",
     "html_url": "https://github.com/louislog/BMS_Analysis_Tool",
     "description": "BMS 数据批量处理与可视化分析工具。提供 CSV 格式统一、智能文件分组合并、多维数据可视化等功能。 支持预设和自定义正则表达式匹配，适用于大规模电池管理系统运行日志的整理与对比分析。",
