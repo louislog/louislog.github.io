@@ -1,5 +1,15 @@
 [
   {
+    "name": "AI_Sanke",
+    "html_url": "https://github.com/louislog/AI_Sanke",
+    "description": null,
+    "homepage": null,
+    "language": "Python",
+    "stargazers_count": 0,
+    "updated_at": "2026-06-09T02:08:39Z",
+    "topics": []
+  },
+  {
     "name": "fund-strategy",
     "html_url": "https://github.com/louislog/fund-strategy",
     "description": "纯前端静态 Web 应用，通过 JSONP 拉取基金/指数历史数据，在前端完成回测与可视化。",
