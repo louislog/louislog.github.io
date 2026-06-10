@@ -170,7 +170,7 @@ $$
 
 | 类型 | 表述 |
 | ---- | ---- |
-| SOC | $\mathrm{SOC}_{\min} \le \mathrm{SOC}_t \le \mathrm{SOC}_{\max}$（如 $0.1$–$0.9$） |
+| SOC | $ \mathrm{SOC}_{\min} \le \mathrm{SOC}_t \le \mathrm{SOC}_{\max}$（如 $0.1$–$0.9$） |
 | 储能功率 | $P_B^{\min} \le P_B(t) \le P_B^{\max}$ |
 | 电压（可选） | $V_{\min} \le V_i(t) \le V_{\max}$（如 $0.95$–$1.05\ \mathrm{pu}$） |
 | 线路电流（可选） | $I_\ell(t) \le I_{\ell,\max}$ |
