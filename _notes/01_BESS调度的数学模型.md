@@ -80,14 +80,14 @@ $$
 状态刻画「当前可观测、且影响未来可行与代价」的信息。一种常用聚合为：
 
 $$
-s_t = \bigl(P_{\mathrm{net}}(t),\, \rho_t,\, \mathrm{SOC}_t\bigr)
+s_t = \bigl(P_{\mathrm{net}}(t),\, \rho_t,\, SOC_t\bigr)
 $$
 
 ### 荷电状态 SOC
 
-$\mathrm{SOC}_t$：时刻 $t$ 的相对电量，$\mathrm{SOC}_t \in [0,1]$（工程上常收紧为 $[\mathrm{SOC}_{\min}, \mathrm{SOC}_{\max}]$）。
+$SOC_t$：时刻 $t$ 的相对电量，$SOC_t \in [0,1]$（工程上常收紧为 $[SOC_{\min}, SOC_{\max}]$）。
 
-| $\mathrm{SOC}$ | 含义   |
+| $SOC$ | 含义   |
 | ---------------- | ------ |
 | $1.0$          | 满电   |
 | $0.5$          | 一半   |
@@ -122,23 +122,23 @@ $$
 在时间步长 $\Delta t$、额定能量 $E_B$（$\mathrm{kWh}$）与综合效率 $\eta \in (0,1]$ 下，若 **$P_B>0$ 表示放电、SOC 下降**，可采用统一写法：
 
 $$
-\mathrm{SOC}_t = \mathrm{SOC}_{t-1} - \frac{\eta\, P_B(t)\, \Delta t}{E_B}
+SOC_t = SOC_{t-1} - \frac{\eta\, P_B(t)\, \Delta t}{E_B}
 $$
 
-$P_B(t)<0$（充电）时，上式右边第二项为负，$\mathrm{SOC}$ **上升**，与物理一致。若充放电效率需分开建模，可改为 $\eta_{\mathrm{ch}}$、$\eta_{\mathrm{dis}}$ 分段或 $\min/\max$ 形式，此处从略。
+$P_B(t)<0$（充电）时，上式右边第二项为负，$SOC$ **上升**，与物理一致。若充放电效率需分开建模，可改为 $\eta_{\mathrm{ch}}$、$\eta_{\mathrm{dis}}$ 分段或 $\min/\max$ 形式，此处从略。
 
 | 符号 | 含义 |
 | ---- | ---- |
-| $\mathrm{SOC}_t$ | 当前相对电量 |
+| $SOC_t$ | 当前相对电量 |
 | $\eta$ | 等效充放效率（标量近似） |
 | $P_B(t)$ | 储能功率（正放负充） |
 | $\Delta t$ | 时间步长 |
 | $E_B$ | 额定能量容量 |
 
-**数值例**：$\mathrm{SOC}_{t-1}=0.5$，$E_B=100\ \mathrm{kWh}$，$P_B(t)=-20\ \mathrm{kW}$（充电），$\Delta t=1\ \mathrm{h}$，$\eta=0.95$：
+**数值例**：$SOC_{t-1}=0.5$，$E_B=100\ \mathrm{kWh}$，$P_B(t)=-20\ \mathrm{kW}$（充电），$\Delta t=1\ \mathrm{h}$，$\eta=0.95$：
 
 $$
-\mathrm{SOC}_t = 0.5 - \frac{0.95 \times (-20) \times 1}{100} = 0.69
+SOC_t = 0.5 - \frac{0.95 \times (-20) \times 1}{100} = 0.69
 $$
 
 ## 六、目标函数（购电成本）
@@ -187,14 +187,14 @@ $$
 | $t_2$ | 210 | 50 | 0.24 | 0.52 | $-30$ |
 | $t_3$ | 230 | 60 | 0.27 | 0.54 | $20$ |
 
-后续用状态更新方程更新 $\mathrm{SOC}$，并检查约束。
+后续用状态更新方程更新 $SOC$，并检查约束。
 
 ## 九、小结
 
 | 角色 | 内容 |
 | ---- | ---- |
-| 输入 | 负荷、光伏、电价；初值 $\mathrm{SOC}_0$ |
-| 状态 | 如 $s_t = [P_{\mathrm{net}}(t), \rho_t, \mathrm{SOC}_t]$ |
+| 输入 | 负荷、光伏、电价；初值 $SOC_0$ |
+| 状态 | 如 $s_t = [P_{\mathrm{net}}(t), \rho_t, SOC_t]$ |
 | 控制量 | $P_B(t)$（正放负充，与功率平衡一致） |
 | 目标 | 最小化购电（或综合运行）成本 |
 | 约束 | SOC、功率；扩展至电压、电流与其它运行规则 |
