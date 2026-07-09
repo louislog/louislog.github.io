@@ -1,5 +1,15 @@
 [
   {
+    "name": "ESP32S3_AI_BOX",
+    "html_url": "https://github.com/louislog/ESP32S3_AI_BOX",
+    "description": "ESP32-S3 AI Box - 基于 ESP-IDF 的 AI 视觉/生物识别多模态嵌入式应用平台，集成摄像头、IMU、心率血氧体温传感器、LVGL UI、Wi-Fi 网络、SD 卡存储及 XiaoZhi AI 对话引擎。支持实时视觉处理、生物识别监测、AI 决策推理与多屏交互应用开发。",
+    "homepage": "",
+    "language": "C",
+    "stargazers_count": 2,
+    "updated_at": "2026-07-09T05:20:52Z",
+    "topics": []
+  },
+  {
     "name": "battery_arbitrage_with_drl",
     "html_url": "https://github.com/louislog/battery_arbitrage_with_drl",
     "description": "Battery arbitrage with DRL and time-series forecasting (fork/enhanced)",
@@ -27,16 +37,6 @@
     "language": "Python",
     "stargazers_count": 1,
     "updated_at": "2026-06-12T01:34:51Z",
-    "topics": []
-  },
-  {
-    "name": "ESP32S3_AI_BOX",
-    "html_url": "https://github.com/louislog/ESP32S3_AI_BOX",
-    "description": "ESP32-S3 AI Box - 基于 ESP-IDF 的 AI 视觉/生物识别多模态嵌入式应用平台，集成摄像头、IMU、心率血氧体温传感器、LVGL UI、Wi-Fi 网络、SD 卡存储及 XiaoZhi AI 对话引擎。支持实时视觉处理、生物识别监测、AI 决策推理与多屏交互应用开发。",
-    "homepage": "",
-    "language": "C",
-    "stargazers_count": 1,
-    "updated_at": "2026-06-09T09:54:15Z",
     "topics": []
   },
   {
