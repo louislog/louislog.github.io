@@ -1,5 +1,15 @@
 [
   {
+    "name": "AI_Sanke",
+    "html_url": "https://github.com/louislog/AI_Sanke",
+    "description": "用强化学习训练 AI 玩经典贪吃蛇。项目将 Pygame 实现的贪吃蛇游戏封装为 Gymnasium 标准环境，使用 Stable-Baselines3 的 PPO 算法进行策略优化，并提供训练、评估、可视化与手动游玩等完整工作流，适合作为 RL 入门与实践的参考项目。",
+    "homepage": "",
+    "language": "Python",
+    "stargazers_count": 2,
+    "updated_at": "2026-07-23T15:21:49Z",
+    "topics": []
+  },
+  {
     "name": "ESP32S3_AI_BOX",
     "html_url": "https://github.com/louislog/ESP32S3_AI_BOX",
     "description": "ESP32-S3 AI Box - 基于 ESP-IDF 的 AI 视觉/生物识别多模态嵌入式应用平台，集成摄像头、IMU、心率血氧体温传感器、LVGL UI、Wi-Fi 网络、SD 卡存储及 XiaoZhi AI 对话引擎。支持实时视觉处理、生物识别监测、AI 决策推理与多屏交互应用开发。",
@@ -27,16 +37,6 @@
     "language": "TypeScript",
     "stargazers_count": 0,
     "updated_at": "2026-06-15T07:33:29Z",
-    "topics": []
-  },
-  {
-    "name": "AI_Sanke",
-    "html_url": "https://github.com/louislog/AI_Sanke",
-    "description": "用强化学习训练 AI 玩经典贪吃蛇。项目将 Pygame 实现的贪吃蛇游戏封装为 Gymnasium 标准环境，使用 Stable-Baselines3 的 PPO 算法进行策略优化，并提供训练、评估、可视化与手动游玩等完整工作流，适合作为 RL 入门与实践的参考项目。",
-    "homepage": "",
-    "language": "Python",
-    "stargazers_count": 1,
-    "updated_at": "2026-06-12T01:34:51Z",
     "topics": []
   },
   {
