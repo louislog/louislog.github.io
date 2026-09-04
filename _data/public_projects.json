@@ -20,16 +20,6 @@
     "topics": []
   },
   {
-    "name": "battery_arbitrage_with_drl",
-    "html_url": "https://github.com/louislog/battery_arbitrage_with_drl",
-    "description": "Battery arbitrage with DRL and time-series forecasting (fork/enhanced)",
-    "homepage": null,
-    "language": "Python",
-    "stargazers_count": 0,
-    "updated_at": "2026-06-15T08:55:29Z",
-    "topics": []
-  },
-  {
     "name": "gbk2utf8-cursor",
     "html_url": "https://github.com/louislog/gbk2utf8-cursor",
     "description": "GBK to UTF-8 for Cursor 是一款面向 Cursor 的编码转换扩展，自动识别 GBK 系中文编码，并在确认后转换为 UTF-8，让中文内容在编辑器中正常显示与编辑。",
